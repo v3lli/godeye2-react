@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import clsx from "clsx";
+import './Header.css';
 
 class Header extends Component {
   state = {
     showNav: false
-  }  
+  }
+
   render() {
     const {showNav} = this.state;
     return (
@@ -12,7 +13,7 @@ class Header extends Component {
         <div className="brand-name">
             <strong> Emeka Onyejesi ™ </strong>
         </div>
-            <nav id="menu"  className={clsx(nav, align-items-center, text-center, justify-content-center, {[show]: this.showNav})}>
+            <nav id="menu" className={`nav, align-items-center, text-center, justify-content-center, ${showNav? 'show' : ''}`}>
             <ul>
                 <a className="nav-link" aria-current="page" href="#">Home</a>
                 <a className="nav-link" href="#">Collections</a>
